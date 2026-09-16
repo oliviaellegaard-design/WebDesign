@@ -1,5 +1,5 @@
 nav {
-    background-color: #ffd6e7;
+    background-color: #FFD6E7;
     padding: 25px;
     text-align: center;
     border-radius: 15px;
@@ -13,30 +13,32 @@ nav ul {
 }
 
 nav li {
+    list-style-type: none;
     display: inline-block;
+    font-family: Georgia, serif;
 }
 
 nav a {
-    color: rgb(219, 137, 190);
+    color: #DB89BE;
     text-decoration: none;
     font-weight: bold;
     font-size: 24px;
-    background-color: white;
+    background-color: #FFFFFF;
     padding: 15px 25px;
-    border: 2px solid rgb(219, 137, 190);
+    border: 2px solid #DB89BE;
     border-radius: 10px;
     display: inline-block;
     margin: 5px 10px;
 }
 
 nav a:hover {
-    background-color: pink;
-    color: white;
+    background-color: #FFC0CB;
+    color: #FFFFFF;
 }
 
 header {
-    background-color: pink;
-    color: white;
+    background-color: #FFC0CB;
+    color: #FFFFFF;
     padding: 30px;
     text-align: center;
     border-radius: 15px;
@@ -45,6 +47,7 @@ header {
 
 header h1 {
     font-size: 55px;
+    text-align: center;
 }
 
 main p {
@@ -56,12 +59,12 @@ main p {
 h2 {
     font-size: 38px;
     text-align: center;
-    color: rgb(219, 137, 190);
+    color: #DB89BE;
 }
 
 .flower-box {
-    background-color: #ffd6e7;
-    border: 4px solid white;
+    background-color: #FFD6E7;
+    border: 4px solid #FFFFFF;
     border-radius: 20px;
     padding: 25px;
     width: 600px;
@@ -78,14 +81,14 @@ h2 {
 .flower-box img {
     width: 100%;
     height: auto;
-    border: 5px solid pink;
+    border: 5px solid #FFC0CB;
     border-radius: 12px;
     display: block;
 }
 
 .flower-frame {
-    background-color: #ffd6e7;
-    border: 4px solid white;
+    background-color: #FFD6E7;
+    border: 4px solid #FFFFFF;
     border-radius: 20px;
     padding: 20px;
     width: 350px;
@@ -97,7 +100,7 @@ h2 {
 .flower-frame img {
     width: 100%;
     height: auto;
-    border: 4px solid white;
+    border: 4px solid #FFFFFF;
     border-radius: 10px;
     display: block;
 }
@@ -111,8 +114,8 @@ h2 {
 }
 
 .place-card {
-    background-color: #ffd6e7;
-    border: 4px solid rgb(219, 137, 190);
+    background-color: #FFD6E7;
+    border: 4px solid #DB89BE;
     border-radius: 20px;
     padding: 35px;
     width: 700px;
@@ -123,11 +126,12 @@ h2 {
 
 .place-card h2 {
     font-size: 38px;
+    color: #DB89BE;
 }
 
 .place-card h3 {
     font-size: 30px;
-    color: rgb(219, 137, 190);
+    color: #DB89BE;
 }
 
 .place-card p {
@@ -138,7 +142,7 @@ h2 {
 .place-card img {
     width: 100%;
     height: auto;
-    border: 4px solid white;
+    border: 4px solid #FFFFFF;
     border-radius: 15px;
     display: block;
     margin: 20px auto;
@@ -159,9 +163,9 @@ h2 {
 
 .map-pin {
     font-size: 24px;
-    background-color: white;
-    color: rgb(219, 137, 190);
-    border: 2px solid rgb(219, 137, 190);
+    background-color: #FFFFFF;
+    color: #DB89BE;
+    border: 2px solid #DB89BE;
     border-radius: 10px;
     padding: 12px 18px;
     margin-bottom: 15px;
@@ -169,14 +173,14 @@ h2 {
 }
 
 .map-pin:hover {
-    background-color: pink;
-    color: white;
+    background-color: #FFC0CB;
+    color: #FFFFFF;
 }
 
 #mapMessage {
     font-size: 26px;
     text-align: center;
-    color: rgb(219, 137, 190);
+    color: #DB89BE;
 }
 
 #popup {
@@ -203,8 +207,8 @@ h2 {
 }
 
 footer {
-    background-color: #ffd6e7;
-    color: rgb(219, 137, 190);
+    background-color: #FFD6E7;
+    color: #DB89BE;
     text-align: center;
     padding: 15px;
     border-radius: 15px;
