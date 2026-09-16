@@ -10,10 +10,12 @@
 <body>
 
   <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="destinations.html">✈️ Travel With Me</a>
-    <a href="food.html">🍜 Food</a>
-    <a href="ratings.html">⭐ Ratings</a>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="destinations.html">✈️ Destinations</a></li>
+      <li><a href="food.html">🍜 Food</a></li>
+      <li><a href="ratings.html">⭐ Ratings</a></li>
+    </ul>
   </nav>
 
   <header>
@@ -25,7 +27,6 @@
     <h2>🗺️ Places I've Been</h2>
 
     <div class="travel-map">
-
       <button class="map-pin" onclick="showPlace('Denmark')">
         📍 🇩🇰 Denmark
       </button>
@@ -37,16 +38,13 @@
       <button class="map-pin" onclick="showPlace('Mexico')">
         📍 🇲🇽 Mexico
       </button>
-
     </div>
 
     <p id="mapMessage">Click a pin to learn more!</p>
 
     <h2>Where Have I Been?</h2>
 
-    <!-- Denmark -->
     <div class="place-card">
-
       <h2>🇩🇰 Copenhagen, Denmark</h2>
 
       <img
@@ -70,19 +68,18 @@
         colorful buildings, and interesting history.
       </p>
 
-      <h3>Things to See</h3>
+      <h3>Things to Do in Copenhagen</h3>
 
-      <p>
-        Some popular places to see include Nyhavn, Tivoli Gardens,
-        and the colorful waterfront.
-      </p>
-
+      <ul>
+        <li>Visit Nyhavn</li>
+        <li>Explore Tivoli Gardens</li>
+        <li>Walk along the colorful waterfront</li>
+        <li>See historic buildings</li>
+        <li>Try traditional Danish food</li>
+      </ul>
     </div>
 
-
-    <!-- Japan -->
     <div class="place-card">
-
       <h2>🇯🇵 Japan</h2>
 
       <img
@@ -111,13 +108,9 @@
         <li>Try sushi and ramen</li>
         <li>See the cherry blossoms</li>
       </ul>
-
     </div>
 
-
-    <!-- Mexico -->
     <div class="place-card">
-
       <h2>🇲🇽 Mexico</h2>
 
       <img
@@ -145,9 +138,8 @@
         <li>Try tacos and other Mexican foods</li>
         <li>Visit Mexico City</li>
         <li>Experience local festivals and culture</li>
-        <li>See the historic landmarks</li>
+        <li>See historic landmarks</li>
       </ul>
-
     </div>
 
   </main>
