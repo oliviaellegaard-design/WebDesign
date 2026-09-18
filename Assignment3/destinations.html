@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Travel With Me</title>
+  <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">🏠 Home</a></li>
+      <li><a href="destinations.html">✈️ Destinations</a></li>
+      <li><a href="food.html">🍜 Food</a></li>
+      <li><a href="ratings.html">⭐ Ratings</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>✈️ Travel With Me</h1>
+  </header>
+
+  <main>
+
+    <h2>🗺️ Places I've Been</h2>
+
+    <div class="travel-map">
+      <button class="map-pin" onclick="showPlace('Denmark')">
+        📍 🇩🇰 Denmark
+      </button>
+
+      <button class="map-pin" onclick="showPlace('Japan')">
+        📍 🇯🇵 Japan
+      </button>
+
+      <button class="map-pin" onclick="showPlace('Mexico')">
+        📍 🇲🇽 Mexico
+      </button>
+    </div>
+
+    <p id="mapMessage">Click a pin to learn more!</p>
+
+    <h2>Where Have I Been?</h2>
+
+    <div class="place-card">
+      <h2>🇩🇰 Copenhagen, Denmark</h2>
+
+      <img
+        src="images/Screenshot_20260910_171800_Messenger.webp"
+        alt="Travel destination in Denmark">
+
+      <p>
+        Copenhagen is a beautiful city in Denmark known for its colorful
+        buildings, canals, and historic architecture.
+      </p>
+
+      <img
+        src="images/Screenshot_20260910_184410_Drive.webp"
+        alt="Copenhagen waterfront">
+
+      <h3>Why I Chose Copenhagen</h3>
+
+      <p>
+        I chose Copenhagen because my family lives there, which makes the
+        city very special to me. I also enjoy its beautiful scenery,
+        colorful buildings, and interesting history.
+      </p>
+
+      <h3>Things to Do in Copenhagen</h3>
+
+      <ul>
+        <li>Visit Nyhavn</li>
+        <li>Explore Tivoli Gardens</li>
+        <li>Walk along the colorful waterfront</li>
+        <li>See historic buildings</li>
+        <li>Try traditional Danish food</li>
+      </ul>
+    </div>
+
+    <div class="place-card">
+      <h2>🇯🇵 Japan</h2>
+
+      <img
+        src="images/Screenshot_20260910_171638_Messenger.webp"
+        alt="Japan landscape">
+
+      <p>
+        Japan is one of my favorite travel destinations because of its food,
+        culture, beautiful scenery, and exciting cities.
+      </p>
+
+      <h3>Why I Chose Japan</h3>
+
+      <p>
+        I chose Japan because I am interested in the culture, food,
+        beautiful scenery, and unique places to visit. I would also like
+        to experience the busy cities and traditional temples.
+      </p>
+
+      <h3>Things to Do in Japan</h3>
+
+      <ul>
+        <li>Visit Tokyo</li>
+        <li>See Mount Fuji</li>
+        <li>Explore temples and shrines</li>
+        <li>Try sushi and ramen</li>
+        <li>See the cherry blossoms</li>
+      </ul>
+    </div>
+
+    <div class="place-card">
+      <h2>🇲🇽 Mexico</h2>
+
+      <img
+        src="images/Screenshot_20260910_171612_Messenger.webp"
+        alt="Mexico landscape">
+
+      <p>
+        Mexico is a beautiful place known for its delicious food,
+        colorful culture, beautiful beaches, and historic landmarks.
+      </p>
+
+      <h3>Why I Chose Mexico</h3>
+
+      <p>
+        I chose Mexico because I would love to experience the culture,
+        try authentic Mexican food, visit the beaches, and learn more
+        about its history.
+      </p>
+
+      <h3>Things to Do in Mexico</h3>
+
+      <ul>
+        <li>Visit the beautiful beaches</li>
+        <li>Explore ancient Mayan ruins</li>
+        <li>Try tacos and other Mexican foods</li>
+        <li>Visit Mexico City</li>
+        <li>Experience local festivals and culture</li>
+        <li>See historic landmarks</li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Olivia Ellegaard. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function showPlace(place) {
+      let message = "";
+
+      if (place === "Denmark") {
+        message =
+          "🇩🇰 Copenhagen, Denmark — one of my favorite places to visit!";
+      }
+
+      if (place === "Japan") {
+        message =
+          "🇯🇵 Japan — I love the food, culture, scenery, and cities!";
+      }
+
+      if (place === "Mexico") {
+        message =
+          "🇲🇽 Mexico — beautiful beaches, culture, food, and history!";
+      }
+
+      document.getElementById("mapMessage").innerHTML = message;
+    }
+  </script>
+
+</body>
+
+</html>
