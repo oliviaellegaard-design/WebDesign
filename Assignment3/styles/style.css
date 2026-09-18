@@ -214,3 +214,41 @@ footer {
     border-radius: 15px;
     margin-top: 20px;
 }
+.about-content {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.about-content p {
+    font-size: 36px;
+    line-height: 1.6;
+    text-align: center;
+}
+
+.about-photo {
+    width: 600px;
+    max-width: 85%;
+    height: auto;
+    border: 5px solid #FFC0CB;
+    border-radius: 15px;
+    display: block;
+    margin: 30px auto;
+}
+
+.about-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+    margin: 30px auto;
+}
+
+.about-gallery img {
+    width: 300px;
+    max-width: 85%;
+    height: auto;
+    border: 5px solid #FFC0CB;
+    border-radius: 15px;
+    display: block;
+}
