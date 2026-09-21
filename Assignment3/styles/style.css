@@ -214,6 +214,7 @@ footer {
     border-radius: 15px;
     margin-top: 20px;
 }
+
 .about-content {
     text-align: center;
     margin: 30px auto;
@@ -251,4 +252,70 @@ footer {
     border: 5px solid #FFC0CB;
     border-radius: 15px;
     display: block;
+}
+
+.hero {
+    padding: 2%;
+}
+
+.hero img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+    height: 555px;
+    object-fit: cover;
+}
+
+.hero blockquote {
+    text-align: center;
+    max-width: 100%;
+    margin: 0;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 30px;
+    background-color: #FFD6E7;
+    color: #DB89BE;
+    padding-top: 3%;
+}
+
+.hero cite {
+    display: block;
+    text-align: center;
+    color: #DB89BE;
+    background-color: #FFD6E7;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.travel-card {
+    display: inline-block;
+    max-width: 25%;
+    height: auto;
+    background-color: #FFD6E7;
+    padding: 10px;
+    padding-bottom: 35px;
+    margin: 1%;
+    font-family: Georgia, serif;
+}
+
+.travel-card h3 {
+    text-align: center;
+    font-size: 20px;
+}
+
+.travel-card img {
+    display: block;
+    max-width: 70%;
+    margin: 0 auto;
+    padding-bottom: 7%;
+}
+.travel-card p {
+    width: fit-content;
+    margin: 0 auto;
+    padding-left: 5%;
+    text-align: left;
+}
+.travel-card-group {
+    text-align: center;
 }
