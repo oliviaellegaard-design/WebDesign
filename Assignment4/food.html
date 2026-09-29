@@ -1,9 +1,9 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
   <meta charset="UTF-8">
+
   <meta name="viewport"
         content="width=device-width, initial-scale=1.0">
 
@@ -11,8 +11,9 @@
 
   <!-- Pink food icon for browser tab -->
   <link rel="icon" type="image/png"
-        href="C:/Users/olivi/Downloads/4bb64fea-49fe-4b05-861f-3303177d6668.png">
+        href="images/food-icon.png">
 
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
@@ -33,10 +34,12 @@
 
   <main>
 
+    <!-- Food Fact Button -->
     <button onclick="showPopup()">
       Click for a Food Fact!
     </button>
 
+    <!-- Food Fact Popup -->
     <div id="popup">
       <p>
         🍜 Fun fact: Smørrebrød is a traditional
@@ -46,6 +49,8 @@
       <button onclick="closePopup()">Close</button>
     </div>
 
+
+    <!-- Denmark -->
     <h2>🇩🇰 Denmark</h2>
 
     <p>
@@ -55,6 +60,8 @@
       Danish dishes.
     </p>
 
+
+    <!-- Japan -->
     <h2>🇯🇵 Japan</h2>
 
     <p>
@@ -64,6 +71,8 @@
       Japanese foods.
     </p>
 
+
+    <!-- Mexico -->
     <h2>🇲🇽 Mexico</h2>
 
     <p>
@@ -73,6 +82,7 @@
     </p>
 
     <div class="flower-frame">
+
       <div class="flowers">
         🌸 🌷 🌼 🌸 🌷 🌼 🌸
       </div>
@@ -80,9 +90,12 @@
       <img
         src="images/Screenshot_20260910_172018_Messenger.webp"
         alt="Plate of Mexican food">
+
     </div>
 
+
     <div class="flower-frame">
+
       <div class="flowers">
         🌸 🌷 🌼 🌸 🌷 🌼 🌸
       </div>
@@ -90,9 +103,11 @@
       <img
         src="images/Screenshot_20260910_172032_Messenger.webp"
         alt="Plate of Mexican food">
+
     </div>
 
   </main>
+
 
   <footer>
     <p>
@@ -101,17 +116,20 @@
     </p>
   </footer>
 
+
+  <!-- JavaScript -->
   <script>
+
     function showPopup() {
-      document.getElementById("popup").style.display =
-        "block";
+      document.getElementById("popup").style.display = "block";
     }
 
     function closePopup() {
-      document.getElementById("popup").style.display =
-        "none";
+      document.getElementById("popup").style.display = "none";
     }
+
   </script>
 
 </body>
+
 </html>
