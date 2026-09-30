@@ -23,6 +23,8 @@
       <li><a href="destinations.html">✈️ Destinations</a></li>
       <li><a href="food.html">🍜 Food</a></li>
       <li><a href="ratings.html">⭐ Ratings</a></li>
+      <li><a href="about.html">🌸 About</a></li>
+      <li><a href="info.html">ℹ️ Info</a></li>
     </ul>
   </nav>
 
@@ -57,7 +59,6 @@
     </p>
 
     <h2>Where Have I Been?</h2>
-
 
     <!-- Copenhagen -->
     <div class="place-card">
@@ -97,7 +98,6 @@
 
     </div>
 
-
     <!-- Japan -->
     <div class="place-card">
 
@@ -131,7 +131,6 @@
       </ul>
 
     </div>
-
 
     <!-- Mexico -->
     <div class="place-card">
@@ -168,14 +167,74 @@
 
     </div>
 
-  </main>
+    <!-- Travel Recommendation Form -->
+    <div class="place-card">
 
+      <h2>✈️ Where Should I Travel Next?</h2>
+
+      <p>
+        Have a favorite travel destination? Send me a recommendation!
+      </p>
+
+      <form>
+
+        <label for="name">Your Name:</label>
+        <br>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Enter your name"
+          required>
+
+        <br><br>
+
+        <label for="destination">Where should I travel?</label>
+        <br>
+        <input
+          type="text"
+          id="destination"
+          name="destination"
+          placeholder="Enter a destination"
+          required>
+
+        <br><br>
+
+        <label for="travel-type">What kind of destination is it?</label>
+        <br>
+        <select id="travel-type" name="travel-type">
+          <option value="beach">🏖️ Beach</option>
+          <option value="city">🏙️ City</option>
+          <option value="nature">🌿 Nature</option>
+          <option value="historic">🏛️ Historic</option>
+        </select>
+
+        <br><br>
+
+        <label for="reason">Why should I visit?</label>
+        <br>
+        <textarea
+          id="reason"
+          name="reason"
+          rows="5"
+          placeholder="Tell me what makes this destination special!"></textarea>
+
+        <br><br>
+
+        <button type="submit">
+          Send Recommendation 🌸
+        </button>
+
+      </form>
+
+    </div>
+
+  </main>
 
   <!-- Footer -->
   <footer>
     <p>&copy; 2026 Olivia Ellegaard. All rights reserved.</p>
   </footer>
-
 
   <!-- JavaScript -->
   <script>

@@ -1,3 +1,22 @@
+/* Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
+
+
+/* Main Fonts */
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+
+/* Navigation */
+
 nav {
     background-color: #FFD6E7;
     padding: 25px;
@@ -15,7 +34,7 @@ nav ul {
 nav li {
     list-style-type: none;
     display: inline-block;
-    font-family: Georgia, serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav a {
@@ -29,12 +48,18 @@ nav a {
     border-radius: 10px;
     display: inline-block;
     margin: 5px 10px;
+
+    /* New CSS Property #1 */
+    transition: 0.3s;
 }
 
 nav a:hover {
     background-color: #FFC0CB;
     color: #FFFFFF;
 }
+
+
+/* Header */
 
 header {
     background-color: #FFC0CB;
@@ -48,7 +73,13 @@ header {
 header h1 {
     font-size: 55px;
     text-align: center;
+
+    /* New CSS Property #2 */
+    letter-spacing: 2px;
 }
+
+
+/* Main Text */
 
 main p {
     font-size: 30px;
@@ -61,6 +92,9 @@ h2 {
     text-align: center;
     color: #DB89BE;
 }
+
+
+/* Flower Box */
 
 .flower-box {
     background-color: #FFD6E7;
@@ -86,6 +120,9 @@ h2 {
     display: block;
 }
 
+
+/* Flower Frame */
+
 .flower-frame {
     background-color: #FFD6E7;
     border: 4px solid #FFFFFF;
@@ -105,6 +142,9 @@ h2 {
     display: block;
 }
 
+
+/* Travel Map */
+
 .travel-map {
     display: flex;
     justify-content: center;
@@ -112,6 +152,9 @@ h2 {
     flex-wrap: wrap;
     margin: 30px auto;
 }
+
+
+/* Place Cards */
 
 .place-card {
     background-color: #FFD6E7;
@@ -122,6 +165,9 @@ h2 {
     max-width: 85%;
     text-align: center;
     margin: 35px auto;
+
+    /* New CSS Property #3 */
+    box-shadow: 0 6px 15px rgba(219, 137, 190, 0.3);
 }
 
 .place-card h2 {
@@ -161,7 +207,11 @@ h2 {
     margin: 10px 0;
 }
 
+
+/* Map Buttons */
+
 .map-pin {
+    font-family: 'Poppins', sans-serif;
     font-size: 24px;
     background-color: #FFFFFF;
     color: #DB89BE;
@@ -183,9 +233,15 @@ h2 {
     color: #DB89BE;
 }
 
+
+/* Food Popup */
+
 #popup {
     display: none;
 }
+
+
+/* Flying Airplane */
 
 .airplane {
     position: fixed;
@@ -206,6 +262,9 @@ h2 {
     }
 }
 
+
+/* Footer */
+
 footer {
     background-color: #FFD6E7;
     color: #DB89BE;
@@ -214,6 +273,9 @@ footer {
     border-radius: 15px;
     margin-top: 20px;
 }
+
+
+/* About Page */
 
 .about-content {
     text-align: center;
@@ -254,6 +316,9 @@ footer {
     display: block;
 }
 
+
+/* Hero Section */
+
 .hero {
     padding: 2%;
 }
@@ -288,6 +353,9 @@ footer {
     padding-bottom: 3%;
 }
 
+
+/* Travel Cards */
+
 .travel-card {
     display: inline-block;
     max-width: 25%;
@@ -296,7 +364,7 @@ footer {
     padding: 10px;
     padding-bottom: 35px;
     margin: 1%;
-    font-family: Georgia, serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 .travel-card h3 {
@@ -310,12 +378,95 @@ footer {
     margin: 0 auto;
     padding-bottom: 7%;
 }
+
 .travel-card p {
     width: fit-content;
     margin: 0 auto;
     padding-left: 5%;
     text-align: left;
 }
+
 .travel-card-group {
     text-align: center;
+}
+
+
+/* Travel Recommendation Form */
+
+form {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+}
+
+form label {
+    color: #DB89BE;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+form input,
+form select,
+form textarea {
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    width: 80%;
+    max-width: 500px;
+    padding: 12px;
+    margin-top: 8px;
+    border: 2px solid #DB89BE;
+    border-radius: 10px;
+    background-color: #FFFFFF;
+    box-sizing: border-box;
+}
+
+form textarea {
+    resize: vertical;
+}
+
+form button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: #DB89BE;
+    background-color: #FFFFFF;
+    border: 2px solid #DB89BE;
+    border-radius: 10px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #FFC0CB;
+    color: #FFFFFF;
+}
+
+
+/* Travel Ratings Table */
+
+table {
+    font-family: 'Poppins', sans-serif;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 25px auto;
+    background-color: #FFFFFF;
+}
+
+th {
+    background-color: #DB89BE;
+    color: #FFFFFF;
+    font-size: 20px;
+    padding: 15px;
+    border: 2px solid #DB89BE;
+}
+
+td {
+    color: #DB89BE;
+    font-size: 18px;
+    padding: 15px;
+    border: 2px solid #DB89BE;
+    text-align: center;
+}
+
+tbody tr:hover {
+    background-color: #FFF0F6;
 }
