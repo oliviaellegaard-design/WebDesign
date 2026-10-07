@@ -2,9 +2,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
 
-
 /* Assignment 5 Color Palette */
-
 :root {
     --light-pink: #FFD6E7;
     --classic-pink: #FFC0CB;
@@ -16,9 +14,7 @@
     --dark-text: #302B35;
 }
 
-
 /* Main Fonts */
-
 * {
     box-sizing: border-box;
 }
@@ -30,15 +26,11 @@ body {
     margin: 8px;
 }
 
-h1,
-h2,
-h3 {
+h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
 
-
 /* Navigation */
-
 nav {
     background-color: var(--light-pink);
     padding: 25px;
@@ -81,9 +73,7 @@ nav a:focus-visible {
     color: var(--dark-text);
 }
 
-
 /* Header */
-
 header {
     background-color: var(--classic-pink);
     color: var(--dark-text);
@@ -101,9 +91,7 @@ header h1 {
     letter-spacing: 2px;
 }
 
-
 /* Main Text */
-
 main p {
     font-size: 30px;
     line-height: 1.6;
@@ -116,9 +104,7 @@ h2 {
     color: #893B69;
 }
 
-
 /* Flower Box */
-
 .flower-box {
     background-color: var(--pastel-yellow);
     border: 4px solid #FFFFFF;
@@ -143,9 +129,7 @@ h2 {
     display: block;
 }
 
-
 /* Flower Frame */
-
 .flower-frame {
     background-color: var(--lavender);
     border: 4px solid #FFFFFF;
@@ -165,9 +149,7 @@ h2 {
     display: block;
 }
 
-
 /* Travel Map */
-
 .travel-map {
     display: flex;
     justify-content: center;
@@ -176,9 +158,7 @@ h2 {
     margin: 30px auto;
 }
 
-
 /* Place Cards */
-
 .place-card {
     background-color: var(--pastel-green);
     border: 4px solid var(--dusty-pink);
@@ -230,9 +210,7 @@ h2 {
     margin: 10px 0;
 }
 
-
 /* Map Buttons */
-
 .map-pin {
     font-family: 'Poppins', sans-serif;
     font-size: 24px;
@@ -256,16 +234,12 @@ h2 {
     color: #893B69;
 }
 
-
 /* Food Popup */
-
 #popup {
     display: none;
 }
 
-
 /* Flying Airplane */
-
 .airplane {
     position: fixed;
     top: 120px;
@@ -286,9 +260,7 @@ h2 {
     }
 }
 
-
 /* Footer */
-
 footer {
     background-color: var(--light-pink);
     color: #893B69;
@@ -298,9 +270,7 @@ footer {
     margin-top: 20px;
 }
 
-
 /* About Page */
-
 .about-content {
     text-align: center;
     margin: 30px auto;
@@ -340,9 +310,7 @@ footer {
     display: block;
 }
 
-
 /* Hero Section */
-
 .hero {
     padding: 2%;
 }
@@ -377,9 +345,7 @@ footer {
     padding-bottom: 3%;
 }
 
-
 /* Assignment 5: Custom Travel Graphic */
-
 .custom-graphic {
     display: flex;
     justify-content: center;
@@ -400,9 +366,7 @@ footer {
     border-radius: 10px;
 }
 
-
 /* Travel Cards */
-
 .travel-card {
     display: inline-block;
     vertical-align: top;
@@ -440,9 +404,7 @@ footer {
     text-align: center;
 }
 
-
 /* Travel Recommendation Form */
-
 form {
     font-family: 'Poppins', sans-serif;
     text-align: center;
@@ -490,9 +452,7 @@ form button:hover {
     color: var(--dark-text);
 }
 
-
 /* Travel Ratings Table */
-
 table {
     font-family: 'Poppins', sans-serif;
     width: 100%;
@@ -521,55 +481,70 @@ tbody tr:hover {
     background-color: var(--pastel-yellow);
 }
 
-
-/* Assignment 5: Media Query for Mobile Screens */
+/* Assignment 5: Mobile Layout */
+/* Screens 600px wide or smaller */
 
 @media screen and (max-width: 600px) {
 
-    /* Navigation */
+    /* Keep everything inside the phone screen */
+    body {
+        margin: 8px;
+    }
 
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Mobile Navigation */
     nav {
-        padding: 15px;
+        padding: 12px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
     }
 
     nav li {
         display: block;
+        width: 100%;
     }
 
     nav a {
-        font-size: 18px;
-        padding: 10px 15px;
-        margin: 5px auto;
-        width: 90%;
+        display: block;
+        width: 100%;
+        margin: 0;
+        padding: 12px 10px;
+        font-size: 16px;
     }
 
-    /* Header */
-
+    /* Mobile Header */
     header {
-        padding: 20px 10px;
+        padding: 18px 10px;
     }
 
     header h1 {
-        font-size: 32px;
+        font-size: 30px;
         letter-spacing: 1px;
     }
 
-    /* Main Text */
+    /* Mobile Text */
+    h2 {
+        font-size: 26px;
+    }
 
     main p {
-        font-size: 20px;
+        font-size: 18px;
+        line-height: 1.6;
     }
 
-    h2 {
-        font-size: 28px;
-    }
-
-    /* Flower Box */
-
+    /* Decorative Boxes */
     .flower-box,
     .flower-frame {
-        width: auto;
-        max-width: 90%;
+        width: 100%;
+        max-width: 100%;
         padding: 15px;
     }
 
@@ -578,17 +553,17 @@ tbody tr:hover {
     }
 
     /* Hero Section */
-
     .hero {
         padding: 2%;
     }
 
     .hero img {
+        width: 100%;
         height: auto;
     }
 
     .hero blockquote {
-        font-size: 22px;
+        font-size: 20px;
         padding: 15px;
     }
 
@@ -598,9 +573,8 @@ tbody tr:hover {
     }
 
     /* Custom Travel Graphic */
-
     .custom-graphic {
-        max-width: 90%;
+        max-width: 100%;
         padding: 10px;
         margin: 20px auto;
     }
@@ -610,53 +584,68 @@ tbody tr:hover {
         height: auto;
     }
 
-    /* Travel Cards */
+    /* Travel Cards: CSS Grid */
+    .travel-card-group {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        gap: 16px;
+    }
 
     .travel-card {
         display: block;
-        max-width: 90%;
         width: 100%;
-        margin: 20px auto;
+        max-width: 100%;
+        margin: 0;
         padding: 15px;
     }
 
     .travel-card img {
-        max-width: 90%;
+        max-width: 100%;
     }
 
-    /* Place Cards */
+    .travel-card p {
+        font-size: 16px;
+        overflow-wrap: anywhere;
+    }
 
+    /* Destination Information Cards */
     .place-card {
-        width: auto;
-        max-width: 90%;
-        padding: 20px;
+        width: 100%;
+        max-width: 100%;
+        padding: 16px;
+        margin: 20px auto;
     }
 
     .place-card h2 {
-        font-size: 28px;
+        font-size: 26px;
     }
 
     .place-card h3 {
-        font-size: 24px;
+        font-size: 22px;
     }
 
     .place-card p,
     .place-card li,
     .place-card ul {
-        font-size: 18px;
+        font-size: 17px;
+        line-height: 1.6;
     }
 
-    /* Map */
+    .place-card ul {
+        padding-left: 22px;
+    }
 
+    /* Travel Map: Flexbox */
     .travel-map {
         flex-direction: column;
-        align-items: center;
-        gap: 15px;
+        align-items: stretch;
+        gap: 10px;
     }
 
     .map-pin {
+        width: 100%;
         font-size: 18px;
-        max-width: 100%;
+        margin-bottom: 0;
     }
 
     #mapMessage {
@@ -664,22 +653,30 @@ tbody tr:hover {
     }
 
     /* About Page */
+    .about-content {
+        max-width: 100%;
+    }
 
     .about-content p {
-        font-size: 20px;
+        font-size: 18px;
     }
 
     .about-photo {
-        max-width: 90%;
+        max-width: 100%;
+    }
+
+    .about-gallery {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
     }
 
     .about-gallery img {
-        width: 90%;
+        width: 100%;
         max-width: 350px;
     }
 
-    /* Forms */
-
+    /* Mobile Forms */
     form label {
         font-size: 18px;
     }
@@ -687,21 +684,22 @@ tbody tr:hover {
     form input,
     form select,
     form textarea {
-        width: 95%;
+        width: 100%;
+        max-width: 100%;
         font-size: 16px;
     }
 
     form button {
+        max-width: 100%;
         font-size: 18px;
     }
 
-    /* Ratings Table */
-
+    /* Mobile Ratings Table */
     table {
-        font-size: 14px;
         display: block;
-        overflow-x: auto;
         max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
     }
 
     th,
@@ -710,24 +708,22 @@ tbody tr:hover {
         font-size: 14px;
     }
 
-    /* Airplane */
-
+    /* Flying Airplane */
     .airplane {
         font-size: 35px;
     }
 
     /* Footer */
-
     footer {
         font-size: 14px;
         padding: 12px;
     }
+
 }
 
-
 /* Reduced Motion Accessibility */
-
 @media (prefers-reduced-motion: reduce) {
+
     .airplane {
         animation: none;
         display: none;
@@ -736,4 +732,5 @@ tbody tr:hover {
     nav a {
         transition: none;
     }
+
 }
