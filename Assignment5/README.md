@@ -79,3 +79,24 @@ I feel more confident creating and styling different website components and maki
 ### Exploring `display: flex;`
 
 I am getting more comfortable using `display: flex;` to organize items, create spacing, and keep layouts balanced.
+## Component Plan
+
+**Webpage the component will be applied to:**  
+Homepage (index.html)
+
+**Type of component:**  
+Travel destination cards featuring Copenhagen, Japan, and Mexico with better photos.
+
+*Why it's needed: 
+I want visitors to easily explore the different destinations featured on my Travel With Me website. The travel cards help organize my pictures and information about each country. They also make my website more visually appealing and easier to navigate. I want visitors to be able to see each destination clearly without feeling overwhelmed by too much information.
+
+Features:
+- A heading displaying each destination's name
+- A photograph representing each destination
+- A short paragraph describing the destination
+- Pastel background colors that match my website's theme
+- Rounded borders and consistent spacing
+- A layout that adjusts to different screen sizes
+
+What I'll use to build it:  
+I plan to use CSS Grid to organize my travel destination cards and make them responsive on different screen sizes. I will also use Flexbox to help align and space elements when needed. On mobile devices with screens 600px wide or smaller, the travel cards will stack vertically, making my website easier to read and navigate.
