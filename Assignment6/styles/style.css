@@ -304,6 +304,21 @@ footer {
     display: block;
 }
 
+/* Travel with Olivia Logo */
+.about-logo {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.about-logo img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
 /* Hero Section */
 .hero {
     padding: 2%;
@@ -493,10 +508,9 @@ tbody tr:hover {
     background-color: var(--pastel-yellow);
 }
 
-/* Mobile Layout - Screens 600px or smaller */
+/* Mobile Layout - Screens 600px or Smaller */
 @media screen and (max-width: 600px) {
 
-    /* Mobile Body */
     body {
         margin: 8px;
     }
@@ -581,7 +595,6 @@ tbody tr:hover {
         padding-bottom: 15px;
     }
 
-    /* Custom Travel Graphic */
     .custom-graphic {
         max-width: 100%;
         padding: 10px;
@@ -652,7 +665,7 @@ tbody tr:hover {
         padding-left: 22px;
     }
 
-    /* Travel Map: Flexbox */
+    /* Travel Map */
     .travel-map {
         flex-direction: column;
         align-items: stretch;
@@ -737,6 +750,57 @@ tbody tr:hover {
     }
 }
 
+/* Clickable Images - Homepage */
+.flower-box a,
+.custom-graphic a,
+.travel-card a {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 12px;
+    cursor: zoom-in;
+}
+
+/* Image Hover Animation */
+.flower-box a img,
+.custom-graphic a img,
+.travel-card a img {
+    transition: transform 0.3s ease;
+}
+
+.flower-box a:hover img,
+.custom-graphic a:hover img,
+.travel-card a:hover img {
+    transform: scale(1.05);
+}
+
+/* Keep Images Responsive */
+.hero .flower-box a img {
+    width: 100%;
+    height: auto;
+}
+
+.travel-card a img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Keyboard Accessibility */
+.flower-box a:focus-visible,
+.custom-graphic a:focus-visible,
+.travel-card a:focus-visible {
+    outline: 3px solid var(--dusty-pink);
+    outline-offset: 4px;
+}
+
+/* Mobile Clickable Images */
+@media screen and (max-width: 600px) {
+    .travel-card a img {
+        height: 220px;
+    }
+}
+
 /* Reduced Motion Accessibility */
 @media (prefers-reduced-motion: reduce) {
     .airplane {
@@ -747,21 +811,18 @@ tbody tr:hover {
     nav a {
         transition: none;
     }
-}
 
-/* Travel with Olivia Logo - About Page */
-.about-logo {
-    text-align: center;
-    margin: 25px auto;
-}
+    .flower-box a img,
+    .custom-graphic a img,
+    .travel-card a img {
+        transition: none;
+    }
 
-.about-logo img {
-    display: block;
-    width: 100%;
-    max-width: 450px;
-    height: auto;
-    margin: 0 auto;
-    border-radius: 15px;
+    .flower-box a:hover img,
+    .custom-graphic a:hover img,
+    .travel-card a:hover img {
+        transform: none;
+    }
 }
 
 
