@@ -2,7 +2,7 @@
 /* Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@400;500;600&display=swap');
 
-/* Assignment 5 Color Palette */
+/* Assignment 6 Color Palette */
 :root {
     --light-pink: #FFD6E7;
     --classic-pink: #FFC0CB;
@@ -339,7 +339,7 @@ footer {
     padding-bottom: 3%;
 }
 
-/* Assignment 5: Custom Travel Graphic */
+/* Custom Travel Graphic */
 .custom-graphic {
     display: flex;
     justify-content: center;
@@ -360,8 +360,7 @@ footer {
     border-radius: 10px;
 }
 
-/* Travel Cards - Updated Equal Size Layout */
-
+/* Travel Cards - Equal Size Layout */
 .travel-card-group {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -412,11 +411,9 @@ footer {
 
 /* Medium Screens - Two Columns */
 @media screen and (min-width: 601px) and (max-width: 950px) {
-
     .travel-card-group {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-
 }
 
 /* Travel Recommendation Form */
@@ -496,9 +493,7 @@ tbody tr:hover {
     background-color: var(--pastel-yellow);
 }
 
-/* Assignment 5: Mobile Layout */
-/* Screens 600px wide or smaller */
-
+/* Mobile Layout - Screens 600px or smaller */
 @media screen and (max-width: 600px) {
 
     /* Mobile Body */
@@ -740,12 +735,10 @@ tbody tr:hover {
         font-size: 14px;
         padding: 12px;
     }
-
 }
 
 /* Reduced Motion Accessibility */
 @media (prefers-reduced-motion: reduce) {
-
     .airplane {
         animation: none;
         display: none;
@@ -754,6 +747,21 @@ tbody tr:hover {
     nav a {
         transition: none;
     }
-
 }
+
+/* Travel with Olivia Logo - About Page */
+.about-logo {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.about-logo img {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
 
