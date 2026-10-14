@@ -228,9 +228,63 @@ h2 {
     color: #893B69;
 }
 
-/* Food Popup */
+/* Food Fact Button - Bigger */
+main > button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    background-color: var(--pastel-yellow);
+    color: #893B69;
+    border: 3px solid var(--dusty-pink);
+    border-radius: 15px;
+    padding: 20px 35px;
+    display: block;
+    margin: 30px auto;
+    cursor: pointer;
+}
+
+main > button:hover,
+main > button:focus-visible {
+    background-color: var(--classic-pink);
+}
+
+/* Food Fact Popup - Bigger */
 #popup {
     display: none;
+    background-color: var(--lavender);
+    border: 4px solid var(--dusty-pink);
+    border-radius: 20px;
+    padding: 30px;
+    width: 600px;
+    max-width: 90%;
+    margin: 25px auto;
+    text-align: center;
+    box-shadow: 0 6px 15px rgba(219, 137, 190, 0.3);
+}
+
+/* Food Fact Text */
+#popup p {
+    font-size: 28px;
+    line-height: 1.6;
+    color: var(--dark-text);
+}
+
+/* Food Fact Close Button */
+#popup button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+    background-color: var(--light-pink);
+    color: #893B69;
+    border: 2px solid var(--dusty-pink);
+    border-radius: 10px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+#popup button:hover,
+#popup button:focus-visible {
+    background-color: var(--classic-pink);
 }
 
 /* Flying Airplane */
@@ -508,7 +562,7 @@ tbody tr:hover {
     background-color: var(--pastel-yellow);
 }
 
-/* Mobile Layout - Screens 600px or Smaller */
+/* Mobile Layout - 600px or Smaller */
 @media screen and (max-width: 600px) {
 
     body {
@@ -553,7 +607,6 @@ tbody tr:hover {
         letter-spacing: 1px;
     }
 
-    /* Mobile Text */
     h2 {
         font-size: 26px;
     }
@@ -563,7 +616,7 @@ tbody tr:hover {
         line-height: 1.6;
     }
 
-    /* Decorative Boxes */
+    /* Flower Decorations */
     .flower-box,
     .flower-frame {
         width: 100%;
@@ -638,7 +691,7 @@ tbody tr:hover {
         overflow-wrap: anywhere;
     }
 
-    /* Destination Information Cards */
+    /* Destination Cards */
     .place-card {
         width: 100%;
         max-width: 100%;
@@ -743,6 +796,29 @@ tbody tr:hover {
         font-size: 35px;
     }
 
+    /* Food Fact Button - Mobile */
+    main > button {
+        font-size: 20px;
+        padding: 15px 20px;
+        max-width: 95%;
+    }
+
+    /* Food Fact Popup - Mobile */
+    #popup {
+        padding: 20px;
+        width: 100%;
+        max-width: 95%;
+    }
+
+    #popup p {
+        font-size: 20px;
+    }
+
+    #popup button {
+        font-size: 18px;
+        padding: 10px 20px;
+    }
+
     /* Footer */
     footer {
         font-size: 14px;
@@ -824,5 +900,6 @@ tbody tr:hover {
         transform: none;
     }
 }
+
 
 
