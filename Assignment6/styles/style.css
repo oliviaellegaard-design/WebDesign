@@ -154,7 +154,7 @@ h2 {
     margin: 30px auto;
 }
 
-/* Place Cards */
+/* Destination Place Cards */
 .place-card {
     background-color: var(--pastel-green);
     border: 4px solid var(--dusty-pink);
@@ -204,6 +204,30 @@ h2 {
     margin: 10px 0;
 }
 
+/* Clickable Destination Images */
+.place-card a:has(img) {
+    display: block;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 15px;
+    cursor: zoom-in;
+}
+
+/* Destination Image Hover Animation */
+.place-card a img {
+    transition: transform 0.3s ease;
+}
+
+.place-card a:hover img {
+    transform: scale(1.03);
+}
+
+/* Destination Image Keyboard Accessibility */
+.place-card a:focus-visible {
+    outline: 3px solid var(--dusty-pink);
+    outline-offset: 4px;
+}
+
 /* Map Buttons */
 .map-pin {
     font-family: 'Poppins', sans-serif;
@@ -228,7 +252,7 @@ h2 {
     color: #893B69;
 }
 
-/* Food Fact Button - Bigger */
+/* Food Fact Button */
 main > button {
     font-family: 'Poppins', sans-serif;
     font-size: 26px;
@@ -248,7 +272,7 @@ main > button:focus-visible {
     background-color: var(--classic-pink);
 }
 
-/* Food Fact Popup - Bigger */
+/* Food Fact Popup */
 #popup {
     display: none;
     background-color: var(--lavender);
@@ -262,14 +286,12 @@ main > button:focus-visible {
     box-shadow: 0 6px 15px rgba(219, 137, 190, 0.3);
 }
 
-/* Food Fact Text */
 #popup p {
     font-size: 28px;
     line-height: 1.6;
     color: var(--dark-text);
 }
 
-/* Food Fact Close Button */
 #popup button {
     font-family: 'Poppins', sans-serif;
     font-size: 22px;
@@ -478,7 +500,7 @@ footer {
     text-align: center;
 }
 
-/* Medium Screens - Two Columns */
+/* Medium Screens */
 @media screen and (min-width: 601px) and (max-width: 950px) {
     .travel-card-group {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -607,6 +629,7 @@ tbody tr:hover {
         letter-spacing: 1px;
     }
 
+    /* Mobile Text */
     h2 {
         font-size: 26px;
     }
@@ -791,19 +814,13 @@ tbody tr:hover {
         font-size: 14px;
     }
 
-    /* Flying Airplane */
-    .airplane {
-        font-size: 35px;
-    }
-
-    /* Food Fact Button - Mobile */
+    /* Mobile Food Fact */
     main > button {
         font-size: 20px;
         padding: 15px 20px;
         max-width: 95%;
     }
 
-    /* Food Fact Popup - Mobile */
     #popup {
         padding: 20px;
         width: 100%;
@@ -819,6 +836,11 @@ tbody tr:hover {
         padding: 10px 20px;
     }
 
+    /* Flying Airplane */
+    .airplane {
+        font-size: 35px;
+    }
+
     /* Footer */
     footer {
         font-size: 14px;
@@ -826,7 +848,7 @@ tbody tr:hover {
     }
 }
 
-/* Clickable Images - Homepage */
+/* Clickable Homepage Images */
 .flower-box a,
 .custom-graphic a,
 .travel-card a {
@@ -837,7 +859,7 @@ tbody tr:hover {
     cursor: zoom-in;
 }
 
-/* Image Hover Animation */
+/* Homepage Image Hover Animation */
 .flower-box a img,
 .custom-graphic a img,
 .travel-card a img {
@@ -850,7 +872,7 @@ tbody tr:hover {
     transform: scale(1.05);
 }
 
-/* Keep Images Responsive */
+/* Keep Homepage Images Responsive */
 .hero .flower-box a img {
     width: 100%;
     height: auto;
@@ -862,7 +884,7 @@ tbody tr:hover {
     object-fit: cover;
 }
 
-/* Keyboard Accessibility */
+/* Homepage Keyboard Accessibility */
 .flower-box a:focus-visible,
 .custom-graphic a:focus-visible,
 .travel-card a:focus-visible {
@@ -879,6 +901,7 @@ tbody tr:hover {
 
 /* Reduced Motion Accessibility */
 @media (prefers-reduced-motion: reduce) {
+
     .airplane {
         animation: none;
         display: none;
@@ -890,16 +913,19 @@ tbody tr:hover {
 
     .flower-box a img,
     .custom-graphic a img,
-    .travel-card a img {
+    .travel-card a img,
+    .place-card a img {
         transition: none;
     }
 
     .flower-box a:hover img,
     .custom-graphic a:hover img,
-    .travel-card a:hover img {
+    .travel-card a:hover img,
+    .place-card a:hover img {
         transform: none;
     }
 }
+
 
 
 
