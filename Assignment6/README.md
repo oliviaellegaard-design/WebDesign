@@ -100,3 +100,12 @@ Features:
 
 What I'll use to build it:  
 I plan to use CSS Grid to organize my travel destination cards and make them responsive on different screen sizes. I will also use Flexbox to help align and space elements when needed. On mobile devices with screens 600px wide or smaller, the travel cards will stack vertically, making my website easier to read and navigate.
+Yes, I plan to continue developing my Travel With Olivia website for my final project later in the semester. I have enjoyed creating a website that shares my travel experiences, favorite destinations, and foods from different countries.
+
+The three things I would most want to remember when revisiting my website are:
+
+Keep my design consistent. I want to continue using my pastel color palette, flower decorations, and Travel With Olivia logo because they make my website feel welcoming and personal.
+
+Improve my interactive features. I would like to continue working on my clickable images, destination buttons, food fact pop-up, and travel recommendation form. I especially want to make the form functional so visitors can actually submit their recommendations.
+
+Continue improving my layout and content. I want to add more travel photos, share more details about my experiences, and make sure my pages look organized and work well on both computers and phones.
