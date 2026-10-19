@@ -926,6 +926,57 @@ tbody tr:hover {
     }
 }
 
+/* ========================================
+   PHOTO BORDER FIX
+   Remove CSS black areas around photos
+   while keeping the pink pastel design
+======================================== */
+
+/* Remove unwanted link backgrounds */
+.flower-box a,
+.custom-graphic a,
+.travel-card a,
+.place-card a:has(img) {
+    background: transparent;
+    border: none;
+    box-shadow: none;
+    overflow: hidden;
+    border-radius: 15px;
+}
+
+/* Remove unwanted image outlines and shadows */
+.flower-box img,
+.custom-graphic img,
+.travel-card img,
+.place-card img {
+    outline: none;
+    box-shadow: none;
+    max-width: 100%;
+    border-radius: 15px;
+}
+
+/* Preserve pink borders */
+.flower-box img,
+.place-card img {
+    border: 5px solid var(--classic-pink);
+}
+
+/* Keep travel card images neatly fitted */
+.travel-card img {
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Keep keyboard focus visible */
+.flower-box a:focus-visible,
+.custom-graphic a:focus-visible,
+.travel-card a:focus-visible,
+.place-card a:focus-visible {
+    outline: 3px solid var(--dusty-pink);
+    outline-offset: 4px;
+}
+
 
 
 

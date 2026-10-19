@@ -14,6 +14,36 @@
 
   <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
+
+  <!-- Remove black photo borders -->
+  <style>
+    .flower-box img,
+    .custom-graphic img,
+    .travel-card img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border: none !important;
+      outline: none !important;
+      box-shadow: none !important;
+      border-radius: 15px;
+    }
+
+    .flower-box a,
+    .custom-graphic a,
+    .travel-card a {
+      display: block;
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+      overflow: hidden;
+      border-radius: 15px;
+    }
+
+    .travel-card {
+      overflow: hidden;
+    }
+  </style>
 </head>
 
 <body>
@@ -41,7 +71,6 @@
     </header>
 
     <main>
-
       <p>
         Welcome to my travel website! Here you can learn about
         some of my favorite travel destinations and the
@@ -66,9 +95,7 @@
             decoding="async">
 
         </a>
-
       </div>
-
     </main>
 
     <!-- Travel Quote -->
@@ -92,9 +119,7 @@
           decoding="async">
 
       </a>
-
     </div>
-
   </div>
 
   <!-- Travel Cards -->
@@ -121,7 +146,6 @@
         Copenhagen is one of the destinations featured
         on my travel website.
       </p>
-
     </div>
 
     <!-- Japan -->
@@ -145,7 +169,6 @@
         Japan is one of the destinations featured
         on my travel website.
       </p>
-
     </div>
 
     <!-- Mexico -->
@@ -169,7 +192,6 @@
         Mexico is one of the destinations featured
         on my travel website.
       </p>
-
     </div>
 
   </div>
@@ -182,7 +204,6 @@
   </footer>
 
 </body>
-
 </html>
 
 

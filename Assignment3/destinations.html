@@ -3,12 +3,20 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Travel With Me</title>
+
+  <!-- Pink airplane icon for browser tab -->
+  <link rel="icon" type="image/png" href="images/destinations-icon.png?v=4">
+
+  <!-- CSS -->
   <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
 
+  <!-- Navigation -->
   <nav>
     <ul>
       <li><a href="index.html">🏠 Home</a></li>
@@ -18,15 +26,18 @@
     </ul>
   </nav>
 
+  <!-- Header -->
   <header>
     <h1>✈️ Travel With Me</h1>
   </header>
 
   <main>
 
+    <!-- Places I've Been -->
     <h2>🗺️ Places I've Been</h2>
 
     <div class="travel-map">
+
       <button class="map-pin" onclick="showPlace('Denmark')">
         📍 🇩🇰 Denmark
       </button>
@@ -38,13 +49,19 @@
       <button class="map-pin" onclick="showPlace('Mexico')">
         📍 🇲🇽 Mexico
       </button>
+
     </div>
 
-    <p id="mapMessage">Click a pin to learn more!</p>
+    <p id="mapMessage">
+      Click a pin to learn more!
+    </p>
 
     <h2>Where Have I Been?</h2>
 
+
+    <!-- Copenhagen -->
     <div class="place-card">
+
       <h2>🇩🇰 Copenhagen, Denmark</h2>
 
       <img
@@ -77,9 +94,13 @@
         <li>See historic buildings</li>
         <li>Try traditional Danish food</li>
       </ul>
+
     </div>
 
+
+    <!-- Japan -->
     <div class="place-card">
+
       <h2>🇯🇵 Japan</h2>
 
       <img
@@ -108,9 +129,13 @@
         <li>Try sushi and ramen</li>
         <li>See the cherry blossoms</li>
       </ul>
+
     </div>
 
+
+    <!-- Mexico -->
     <div class="place-card">
+
       <h2>🇲🇽 Mexico</h2>
 
       <img
@@ -140,15 +165,21 @@
         <li>Experience local festivals and culture</li>
         <li>See historic landmarks</li>
       </ul>
+
     </div>
 
   </main>
 
+
+  <!-- Footer -->
   <footer>
     <p>&copy; 2026 Olivia Ellegaard. All rights reserved.</p>
   </footer>
 
+
+  <!-- JavaScript -->
   <script>
+
     function showPlace(place) {
       let message = "";
 
@@ -169,6 +200,7 @@
 
       document.getElementById("mapMessage").innerHTML = message;
     }
+
   </script>
 
 </body>
