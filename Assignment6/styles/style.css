@@ -340,7 +340,10 @@ footer {
     margin-top: 20px;
 }
 
-/* About Page */
+/* =====================================
+   ABOUT PAGE
+===================================== */
+
 .about-content {
     text-align: center;
     margin: 30px auto;
@@ -584,7 +587,11 @@ tbody tr:hover {
     background-color: var(--pastel-yellow);
 }
 
-/* Mobile Layout - 600px or Smaller */
+/* =====================================
+   MOBILE LAYOUT
+   600px OR SMALLER
+===================================== */
+
 @media screen and (max-width: 600px) {
 
     body {
@@ -848,7 +855,10 @@ tbody tr:hover {
     }
 }
 
-/* Clickable Homepage Images */
+/* =====================================
+   CLICKABLE HOMEPAGE IMAGES
+===================================== */
+
 .flower-box a,
 .custom-graphic a,
 .travel-card a {
@@ -926,11 +936,11 @@ tbody tr:hover {
     }
 }
 
-/* ========================================
-   PHOTO BORDER FIX
+/* =====================================
+   HOMEPAGE PHOTO BORDER FIX
    Remove CSS black areas around photos
    while keeping the pink pastel design
-======================================== */
+===================================== */
 
 /* Remove unwanted link backgrounds */
 .flower-box a,
@@ -975,6 +985,58 @@ tbody tr:hover {
 .place-card a:focus-visible {
     outline: 3px solid var(--dusty-pink);
     outline-offset: 4px;
+}
+
+/* =====================================
+   ABOUT PAGE PHOTO BORDER FIX
+   Remove unwanted CSS borders and
+   backgrounds while preserving
+   the pastel pink photo frames
+===================================== */
+
+/* Remove unwanted backgrounds around photos */
+.about-gallery,
+.about-logo {
+    background: transparent;
+    box-shadow: none;
+}
+
+/* Remove unwanted image outlines and shadows */
+.about-photo,
+.about-gallery img,
+.about-logo img {
+    background: transparent;
+    outline: none;
+    box-shadow: none;
+    border-radius: 15px;
+}
+
+/* Keep pretty pink borders around About photos */
+.about-photo,
+.about-gallery img {
+    border: 5px solid var(--classic-pink);
+}
+
+/* Remove extra border around logo */
+.about-logo img {
+    border: none;
+}
+
+/* Keep gallery images fitted nicely */
+.about-gallery img {
+    object-fit: cover;
+    object-position: center;
+    display: block;
+}
+
+/* Keep About page responsive */
+@media screen and (max-width: 600px) {
+    .about-gallery img,
+    .about-photo,
+    .about-logo img {
+        max-width: 100%;
+        height: auto;
+    }
 }
 
 
