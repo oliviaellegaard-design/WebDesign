@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Election Challenge | Voter Ready</title>
+<style>
+body { margin:0; font-family:Arial,sans-serif; color:#10264d; background:#eaf3ff; }
+main { max-width:720px; margin:50px auto; padding:35px; background:white; border-radius:12px; }
+button { padding:13px 18px; margin:8px; color:white; background:#10264d; border:0; border-radius:6px; cursor:pointer; }
+a { color:#244d80; }
+</style>
+</head>
+<body>
+<main>
+<a href="../index.html">Back to Voter Ready</a>
+<h1>Election Challenge</h1>
+<p>Test your knowledge with this first-time voter quiz!</p>
+<h2 id="question">Where can you find official voter registration information?</h2>
+<div id="answers">
+<button onclick="answer(false)">A social media rumor</button>
+<button onclick="answer(true)">Vote.gov</button>
+</div>
+<p id="result" aria-live="polite"></p>
+<p><a href="https://vote.gov/">Explore official voter resources</a></p>
+</main>
+<script>
+function answer(correct) {
+  document.getElementById("result").textContent = correct
+    ? "Correct! Vote.gov helps you find official registration information."
+    : "Try again. Official election resources are a better starting point.";
+}
+</script>
+</body>
+</html>
