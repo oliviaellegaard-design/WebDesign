@@ -4,6 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>About & Contact | Voter Ready</title>
+
 <style>
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Arial, sans-serif; color: #10264d; line-height: 1.7; }
@@ -18,8 +19,10 @@ footer { background: #10264d; color: white; text-align: center; padding: 25px; }
 footer a { color: white; }
 </style>
 
+<link rel="stylesheet" href="styles.css?v=3">
 </head>
 <body>
+
 <header>
 <h1>Voter Ready</h1>
 <nav aria-label="Main navigation">
@@ -28,25 +31,88 @@ footer a { color: white; }
 <a href="how-to-vote.html">How to Vote</a>
 <a href="elections.html">Election Information</a>
 <a href="faq.html">FAQ</a>
-<a href="about.html">About &amp; Contact</a>
+<a href="about.html" aria-current="page">About &amp; Contact</a>
 </nav>
 </header>
+
 <main>
-<h1>About & Contact</h1>
+<h1>About &amp; Contact</h1>
+
 <h2>Our Mission</h2>
-<p>Voter Ready is an independent student educational website designed to help first-time voters understand the voting process.</p>
-<p>Our goal is to offer clear, approachable, nonpartisan information and direct visitors to official election resources.</p>
-<h2>Contact</h2>
-<p>For questions or feedback, please contact the project creator through the contact method provided by your class or organization.</p>
-<p><strong>Disclaimer:</strong> Voter Ready is not an official government website.</p>
+<p>
+Voter Ready is an independent student educational website
+designed to help first-time voters understand the voting process.
+</p>
+
+<p>
+Our goal is to provide clear, welcoming, and nonpartisan
+voting information, along with links to official resources.
+</p>
+
+<h2>Contact Me</h2>
+<p>
+Have a question, suggestion, or feedback about Voter Ready?
+Send me a message below!
+</p>
+
+<form class="contact-form" id="contact-form">
+
+<label for="name">Your Name</label>
+<input type="text" id="name" required>
+
+<label for="email">Your Email</label>
+<input type="email" id="email" required>
+
+<label for="message">Your Message</label>
+<textarea id="message" rows="5" required></textarea>
+
+<button type="submit">Send Message</button>
+
+<p><small>
+Clicking Send Message opens your email application.
+You will need to send the message from there.
+</small></p>
+
+</form>
+
+<p>
+<strong>Disclaimer:</strong> Voter Ready is not an official
+government website. Visit
+<a href="https://vote.gov/">Vote.gov</a>
+for official voting information.
+</p>
 </main>
+
 <footer>
 <p>Voter Ready | Your Guide to Voting</p>
-<p>Independent student educational project. Not an official government website.</p>
+<p>Independent student educational project.</p>
 <a href="index.html">Back to Home</a>
 </footer>
+
+<script>
+const contactEmail = "olivia.ellegaard@gmail.com";
+
+document.getElementById("contact-form")
+  .addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    const name = document.getElementById("name").value;
+    const email = document.getElementById("email").value;
+    const message = document.getElementById("message").value;
+
+    const subject = encodeURIComponent("Voter Ready Contact");
+    const body = encodeURIComponent(
+      "Name: " + name + "\n" +
+      "Email: " + email + "\n\n" +
+      "Message:\n" + message
+    );
+
+    window.location.href =
+      "mailto:" + contactEmail +
+      "?subject=" + subject +
+      "&body=" + body;
+  });
+</script>
+
 </body>
 </html>
-
-
-
