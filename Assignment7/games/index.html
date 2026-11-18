@@ -5,31 +5,306 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Election Challenge | Voter Ready</title>
 <style>
-body { margin:0; font-family:Arial,sans-serif; color:#10264d; background:#eaf3ff; }
-main { max-width:720px; margin:50px auto; padding:35px; background:white; border-radius:12px; }
-button { padding:13px 18px; margin:8px; color:white; background:#10264d; border:0; border-radius:6px; cursor:pointer; }
-a { color:#244d80; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #eaf3ff;
+  color: #10264d;
+}
+main {
+  max-width: 780px;
+  margin: 35px auto;
+  padding: 30px;
+  background: white;
+  border-radius: 12px;
+}
+header {
+  background: #10264d;
+  color: white;
+  padding: 24px;
+  text-align: center;
+  border-radius: 10px;
+}
+header h1 { color: white; }
+a { color: #244d80; }
+button {
+  background: #10264d;
+  color: white;
+  border: none;
+  padding: 13px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+}
+button:hover:not(:disabled) {
+  background: #244d80;
+}
+button:focus-visible {
+  outline: 3px solid #5b9df0;
+  outline-offset: 3px;
+}
+button:disabled { cursor: default; }
+.scoreboard, .challenge {
+  background: #f3f7ff;
+  border-radius: 10px;
+  padding: 22px;
+  margin: 24px 0;
+}
+.scoreboard { text-align: center; }
+.progress {
+  height: 16px;
+  background: #d4e4f8;
+  border-radius: 20px;
+  overflow: hidden;
+}
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #43835b;
+  transition: width .3s;
+}
+.characters {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 15px;
+}
+.character {
+  background: #eaf3ff;
+  padding: 20px;
+  text-align: center;
+  border: 2px solid #d4e4f8;
+  border-radius: 10px;
+}
+.character.completed {
+  background: #e0f3e7;
+  border-color: #43835b;
+}
+.emoji { font-size: 48px; }
+.story, .feedback {
+  background: white;
+  padding: 17px;
+  border-radius: 8px;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+.story { border-left: 4px solid #244d80; }
+.answer {
+  display: block;
+  width: 100%;
+  text-align: left;
+  margin: 10px 0;
+}
+.answer.correct { background: #267847; }
+.answer.incorrect { background: #b34646; }
+.next { width: 100%; margin-top: 10px; }
+footer { text-align: center; padding: 20px; }
+@media(max-width:600px) {
+  main { margin: 12px; padding: 18px; }
+  .characters { grid-template-columns: 1fr; }
+}
 </style>
 </head>
 <body>
 <main>
 <a href="../index.html">Back to Voter Ready</a>
+<header>
 <h1>Election Challenge</h1>
-<p>Test your knowledge with this first-time voter quiz!</p>
-<h2 id="question">Where can you find official voter registration information?</h2>
-<div id="answers">
-<button onclick="answer(false)">A social media rumor</button>
-<button onclick="answer(true)">Vote.gov</button>
-</div>
-<p id="result" aria-live="polite"></p>
-<p><a href="https://vote.gov/">Explore official voter resources</a></p>
+<p>Meet the Voters!</p>
+</header>
+
+<p>Help four people in your community learn about
+voting. Choose a person and answer their question!</p>
+
+<section class="scoreboard">
+<h2>Your Progress</h2>
+<p id="helped">People Helped: 0 / 4</p>
+<div class="progress"><div id="progressBar"></div></div>
+<h3 id="score">Points: 0 / 40</h3>
+</section>
+
+<h2>Meet Your Community!</h2>
+<div class="characters" id="characters"></div>
+
+<section class="challenge" id="challenge" aria-live="polite">
+<h2>Ready to Play?</h2>
+<p>Choose a person above to begin!</p>
+</section>
+
+<p><a href="https://vote.gov/">Official Voting Resources</a></p>
 </main>
+
+<footer>Voter Ready | Educational Student Project</footer>
+
 <script>
-function answer(correct) {
-  document.getElementById("result").textContent = correct
-    ? "Correct! Vote.gov helps you find official registration information."
-    : "Try again. Official election resources are a better starting point.";
+const people = [
+{
+ name:"Alex",
+ emoji:"🎓",
+ role:"College Student",
+ story:"I'm studying in a different state from my hometown. Where should I register to vote?",
+ question:"What should Alex do?",
+ answers:[
+ "Vote in both states",
+ "Check residency and registration rules",
+ "Assume students cannot vote"
+ ],
+ correct:1,
+ explanation:"Students should check the rules for the state where they intend to vote. Voting twice in the same election is not allowed."
+},
+{
+ name:"Jordan",
+ emoji:"🧑🏽",
+ role:"First-Time Voter",
+ story:"This is my first election! How do I know if I'm registered?",
+ question:"What should Jordan do?",
+ answers:[
+ "Check an official election website",
+ "Wait until Election Day",
+ "Trust a random social media post"
+ ],
+ correct:0,
+ explanation:"Official election resources can help you check registration status and deadlines."
+},
+{
+ name:"Sam",
+ emoji:"👩🏻",
+ role:"Busy Student",
+ story:"I have work and class on Election Day. What are my options?",
+ question:"What should Sam check?",
+ answers:[
+ "Skip the election",
+ "Ask a friend to vote for Sam",
+ "Check early or absentee voting options"
+ ],
+ correct:2,
+ explanation:"Early and absentee voting options depend on state rules. Check the applicable official election website."
+},
+{
+ name:"Taylor",
+ emoji:"🧑🏿‍🦱",
+ role:"Social Media User",
+ story:"I saw conflicting voting deadlines online. Which information should I trust?",
+ question:"What should Taylor do?",
+ answers:[
+ "Trust the most popular post",
+ "Check an official state election website",
+ "Share both posts without checking"
+ ],
+ correct:1,
+ explanation:"Official election offices provide authoritative information about voting deadlines and procedures."
 }
+];
+
+let completed = new Set();
+let points = 0;
+const cards = document.getElementById("characters");
+const game = document.getElementById("challenge");
+
+function el(tag, text, cls="") {
+ const e = document.createElement(tag);
+ e.textContent = text;
+ if(cls) e.className = cls;
+ return e;
+}
+
+function render() {
+ cards.replaceChildren();
+ people.forEach((p,i) => {
+  const card = el("div","","character");
+  if(completed.has(i)) card.classList.add("completed");
+  card.append(
+   el("div",p.emoji,"emoji"),
+   el("h3",p.name),
+   el("p",p.role)
+  );
+  const btn = el("button",
+   completed.has(i) ? "Review Story" : "Talk to "+p.name);
+  btn.onclick = () => openPerson(i);
+  card.append(btn);
+  cards.append(card);
+ });
+ document.getElementById("helped").textContent =
+  "People Helped: "+completed.size+" / 4";
+ document.getElementById("score").textContent =
+  "Points: "+points+" / 40";
+ document.getElementById("progressBar").style.width =
+  (completed.size/4*100)+"%";
+}
+
+function openPerson(i) {
+ const p = people[i];
+ game.replaceChildren(
+  el("h2",p.emoji+" "+p.name),
+  el("p",p.story,"story"),
+  el("h3",p.question)
+ );
+ p.answers.forEach((answer,j) => {
+  const btn = el("button",answer,"answer");
+  if(completed.has(i)) {
+   btn.disabled = true;
+   if(j===p.correct) btn.classList.add("correct");
+  } else {
+   btn.onclick = () => choose(i,j);
+  }
+  game.append(btn);
+ });
+ if(completed.has(i)) feedback(i,true,true);
+}
+
+function choose(i,j) {
+ if(completed.has(i)) return;
+ const correct = j===people[i].correct;
+ if(correct) points+=10;
+ completed.add(i);
+ game.querySelectorAll(".answer").forEach((btn,n) => {
+  btn.disabled=true;
+  if(n===people[i].correct) btn.classList.add("correct");
+  else if(n===j) btn.classList.add("incorrect");
+ });
+ render();
+ feedback(i,correct,false);
+}
+
+function feedback(i,correct,review) {
+ const p=people[i];
+ const box=el("div","","feedback");
+ box.append(
+  el("h3",review ? "Reviewing "+p.name :
+    correct ? "Correct! +10 Points!" : "Let's Learn More!"),
+  el("p",p.explanation)
+ );
+ game.append(box);
+ const next=el("button",
+  completed.size===4 ? "See Final Results" :
+  "Help Another Person","next");
+ next.onclick=() => {
+  if(completed.size===4) results();
+  else openPerson(people.findIndex((p,n)=>!completed.has(n)));
+ };
+ game.append(next);
+}
+
+function results() {
+ game.replaceChildren(
+  el("h2","Congratulations!"),
+  el("h3","You Helped the Community!"),
+  el("p","Final Score: "+points+" / 40"),
+  el("p","You learned about registration, college voting, voting options, and finding reliable information.")
+ );
+ const replay=el("button","Play Again","next");
+ replay.onclick=() => {
+  completed=new Set();
+  points=0;
+  render();
+  game.replaceChildren(
+   el("h2","Ready for Another Round?"),
+   el("p","Choose someone above!")
+  );
+ };
+ game.append(replay);
+}
+
+render();
 </script>
 </body>
 </html>
