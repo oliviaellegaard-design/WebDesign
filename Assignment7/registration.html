@@ -41,6 +41,146 @@ footer a { color: white; }
 <li>Check your registration status before the election.</li>
 </ol>
 <p><a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Find voter registration information at Vote.gov</a></p>
+<!-- FIND YOUR STATE START -->
+<section id="find-your-state" style="
+background:#eaf3ff;
+padding:25px;
+border-radius:12px;
+margin:30px 0;
+color:#10264d;
+">
+
+<h2>Find Your State</h2>
+
+<p>
+Not sure where to register to vote?
+Select your state below to find official
+voter registration information and deadlines.
+</p>
+
+<label for="stateSelect">
+<strong>Choose Your State:</strong>
+</label>
+
+<select id="stateSelect" style="
+display:block;
+width:100%;
+max-width:450px;
+padding:13px;
+margin:15px 0;
+border:2px solid #10264d;
+border-radius:8px;
+font-size:16px;
+background:white;
+color:#10264d;
+">
+<option value="">-- Select Your State --</option>
+</select>
+
+<div id="stateInfo" hidden style="
+background:white;
+padding:20px;
+border-radius:10px;
+margin-top:15px;
+">
+
+<h3 id="stateName"></h3>
+
+<p>
+Learn how to register, check your
+registration status, and find deadlines
+in your selected state.
+</p>
+
+<a id="stateLink"
+href="https://vote.gov/register"
+target="_blank"
+rel="noopener noreferrer"
+style="
+display:inline-block;
+background:#10264d;
+color:white;
+padding:13px 20px;
+border-radius:8px;
+text-decoration:none;
+">
+View Official Registration Information
+</a>
+
+</div>
+
+<p style="font-size:14px;margin-top:20px;">
+Information is provided by Vote.gov.
+Registration rules and deadlines vary by state.
+</p>
+
+</section>
+
+<script>
+(function() {
+
+const states = [
+"Alabama","Alaska","Arizona","Arkansas",
+"California","Colorado","Connecticut",
+"Delaware","District of Columbia","Florida",
+"Georgia","Hawaii","Idaho","Illinois",
+"Indiana","Iowa","Kansas","Kentucky",
+"Louisiana","Maine","Maryland","Massachusetts",
+"Michigan","Minnesota","Mississippi",
+"Missouri","Montana","Nebraska","Nevada",
+"New Hampshire","New Jersey","New Mexico",
+"New York","North Carolina","North Dakota",
+"Ohio","Oklahoma","Oregon","Pennsylvania",
+"Rhode Island","South Carolina","South Dakota",
+"Tennessee","Texas","Utah","Vermont",
+"Virginia","Washington","West Virginia",
+"Wisconsin","Wyoming"
+];
+
+const dropdown =
+document.getElementById("stateSelect");
+
+const info =
+document.getElementById("stateInfo");
+
+const heading =
+document.getElementById("stateName");
+
+const link =
+document.getElementById("stateLink");
+
+states.forEach(function(state) {
+  const option = document.createElement("option");
+  option.value = state;
+  option.textContent = state;
+  dropdown.appendChild(option);
+});
+
+dropdown.addEventListener("change", function() {
+
+  const state = dropdown.value;
+
+  if (state === "") {
+    info.hidden = true;
+    return;
+  }
+
+  heading.textContent =
+    state + " Voter Registration";
+
+  const slug = state.toLowerCase()
+    .replace(/\s+/g, "-");
+
+  link.href =
+    "https://vote.gov/register/" + slug;
+
+  info.hidden = false;
+
+});
+
+})();
+</script>
+<!-- FIND YOUR STATE END -->
 </main>
 <footer>
 <p>Voter Ready | Your Guide to Voting</p>
@@ -49,3 +189,4 @@ footer a { color: white; }
 </footer>
 </body>
 </html>
+
