@@ -42,6 +42,194 @@ footer a { color: white; }
 <li>Follow the instructions for casting your ballot.</li>
 </ol>
 <p><a href="https://www.usa.gov/how-to-vote" target="_blank" rel="noopener noreferrer">Read the official How to Vote guide</a></p>
+<!-- VOTING METHODS START -->
+<section id="voting-methods">
+  <h2>Choose How You Want to Vote</h2>
+  <p>Click a voting method to learn how it works!</p>
+
+  <div class="voting-options">
+    <button type="button" class="voting-choice"
+      data-method="day">Election Day</button>
+
+    <button type="button" class="voting-choice"
+      data-method="early">Vote Early</button>
+
+    <button type="button" class="voting-choice"
+      data-method="mail">Vote by Mail</button>
+  </div>
+
+  <div id="voting-method-info" aria-live="polite">
+    <h3 id="method-title"></h3>
+    <p id="method-description"></p>
+    <ul id="method-steps"></ul>
+
+    <a id="method-link"
+       href="https://www.usa.gov/how-to-vote"
+       target="_blank"
+       rel="noopener noreferrer">
+       View Official Voting Information
+    </a>
+  </div>
+
+  <p class="voting-note">
+    Voting options and requirements vary by state.
+    Always check your state election office.
+  </p>
+</section>
+
+<style>
+#voting-methods {
+  background: #eaf3ff;
+  color: #10264d;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 12px;
+}
+
+#voting-methods .voting-options {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 20px 0;
+}
+
+#voting-methods .voting-choice {
+  padding: 15px 10px;
+  background: white;
+  color: #10264d;
+  border: 2px solid #10264d;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 15px;
+  width: 100%;
+}
+
+#voting-methods .voting-choice:hover {
+  background: #d4e4f8;
+}
+
+#voting-methods .voting-choice.active {
+  background: #10264d;
+  color: white;
+}
+
+#voting-methods .voting-choice:focus-visible {
+  outline: 3px solid #438bd3;
+  outline-offset: 3px;
+}
+
+#voting-method-info {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  line-height: 1.7;
+}
+
+#method-steps li {
+  margin-bottom: 10px;
+}
+
+#method-link {
+  display: inline-block;
+  background: #10264d;
+  color: white;
+  padding: 13px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+#voting-methods .voting-note {
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+@media (max-width: 600px) {
+  #voting-methods .voting-options {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
+
+<script>
+(function () {
+  const methods = {
+    day: {
+      title: "Voting on Election Day",
+      description: "Vote in person at your assigned polling location during official voting hours.",
+      steps: [
+        "Find your assigned polling location.",
+        "Check voting hours and identification requirements.",
+        "Follow the instructions at your polling location."
+      ],
+      link: "https://www.usa.gov/election-day"
+    },
+
+    early: {
+      title: "Voting Early in Person",
+      description: "Some states allow voting in person before Election Day. Dates and locations vary.",
+      steps: [
+        "Check whether early voting is available in your state.",
+        "Find an early voting location and schedule.",
+        "Check what identification you may need."
+      ],
+      link: "https://www.usa.gov/early-voting"
+    },
+
+    mail: {
+      title: "Voting by Mail",
+      description: "Mail and absentee voting rules vary by state. Some voters receive ballots automatically; others need to request one.",
+      steps: [
+        "Check your state's mail voting rules.",
+        "Request a ballot if necessary.",
+        "Follow ballot instructions and return it by the applicable deadline."
+      ],
+      link: "https://www.usa.gov/absentee-voting"
+    }
+  };
+
+  const buttons = document.querySelectorAll(
+    "#voting-methods .voting-choice"
+  );
+
+  function showMethod(type) {
+    const method = methods[type];
+    if (!method) return;
+
+    document.getElementById("method-title").textContent =
+      method.title;
+
+    document.getElementById("method-description").textContent =
+      method.description;
+
+    const list = document.getElementById("method-steps");
+    list.replaceChildren();
+
+    method.steps.forEach(function (step) {
+      const item = document.createElement("li");
+      item.textContent = step;
+      list.appendChild(item);
+    });
+
+    document.getElementById("method-link").href =
+      method.link;
+
+    buttons.forEach(function (button) {
+      const active = button.dataset.method === type;
+      button.classList.toggle("active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+  }
+
+  buttons.forEach(function (button) {
+    button.addEventListener("click", function () {
+      showMethod(button.dataset.method);
+    });
+  });
+
+  showMethod("day");
+})();
+</script>
+<!-- VOTING METHODS END -->
 </main>
 <footer>
 <p>Voter Ready | Your Guide to Voting</p>
@@ -50,3 +238,4 @@ footer a { color: white; }
 </footer>
 </body>
 </html>
+
