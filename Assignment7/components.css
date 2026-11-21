@@ -1,0 +1,40 @@
+﻿/* VOTER READY REUSABLE COMPONENTS */
+
+/* Shared navigation component */
+.vr-site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 18px;
+}
+
+/* Shared page layout component */
+.vr-page-content {
+  box-sizing: border-box;
+}
+
+/* Shared footer component */
+.vr-site-footer {
+  box-sizing: border-box;
+}
+
+/* Reusable card component */
+.vr-shared-card {
+  border-radius: 12px;
+  box-sizing: border-box;
+}
+
+/* Reusable button component */
+.vr-action-button {
+  display: inline-block;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+/* Responsive navigation */
+@media (max-width: 600px) {
+  .vr-site-nav {
+    justify-content: center;
+    gap: 12px;
+  }
+}
