@@ -37,6 +37,299 @@ footer a { color: white; }
 <p>Check your state election office for upcoming elections, registration deadlines, early voting options, ballot information, and voting locations.</p>
 <p><a href="https://www.usa.gov/state-election-office" target="_blank" rel="noopener noreferrer">Find your state election office</a></p>
 <p><a href="https://vote.gov/" target="_blank" rel="noopener noreferrer">Visit Vote.gov</a></p>
+<!-- VIDEO FAQ SECTION START -->
+
+<section id="voter-video-faq">
+
+<h2>Voting FAQs for Young Adults</h2>
+
+<p>
+New to voting? Watch these quick 30-second videos
+to learn about registering to vote and preparing
+for Election Day!
+</p>
+
+<div class="faq-video-buttons">
+
+<button type="button"
+  class="faq-video-choice"
+  data-video="s2Z-EstOtiA"
+  data-title="How Do I Register to Vote?">
+  How Do I Register?
+</button>
+
+<button type="button"
+  class="faq-video-choice"
+  data-video="2PQmcrO_nXI"
+  data-title="How Do I Make a Voting Plan?">
+  How Do I Make a Voting Plan?
+</button>
+
+</div>
+
+<div class="faq-video-card">
+
+<h3 id="faq-video-title">
+How Do I Register to Vote?
+</h3>
+
+<p id="faq-video-description">
+Learn the basics of voter registration
+in this short educational video.
+</p>
+
+<div class="faq-video-container">
+
+<iframe
+  id="faq-video-player"
+  src="https://www.youtube-nocookie.com/embed/s2Z-EstOtiA"
+  title="Be Election Ready: Registering to Vote"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+  allowfullscreen
+  loading="lazy">
+</iframe>
+
+</div>
+
+<p>
+Video provided by the U.S. Election
+Assistance Commission.
+</p>
+
+<p>
+<a id="faq-video-youtube"
+  href="https://www.youtube.com/watch?v=s2Z-EstOtiA"
+  target="_blank"
+  rel="noopener noreferrer">
+  Watch This Video on YouTube
+</a>
+</p>
+
+</div>
+
+<div class="faq-video-resources">
+
+<h3>Have More Voting Questions?</h3>
+
+<p>
+Voting rules and deadlines can vary by state.
+Use official resources to find information
+specific to where you live.
+</p>
+
+<a href="https://vote.gov/"
+target="_blank"
+rel="noopener noreferrer">
+Find Voter Registration Information
+</a>
+
+<a href="https://www.usa.gov/how-to-vote"
+target="_blank"
+rel="noopener noreferrer">
+Learn How to Vote
+</a>
+
+</div>
+
+</section>
+
+<style>
+
+#voter-video-faq {
+  background: #eaf3ff;
+  color: #10264d;
+  padding: 28px;
+  margin: 35px 0;
+  border-radius: 12px;
+}
+
+#voter-video-faq h2 {
+  color: #10264d;
+}
+
+#voter-video-faq p {
+  line-height: 1.7;
+}
+
+#voter-video-faq .faq-video-buttons {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 24px 0;
+}
+
+#voter-video-faq .faq-video-choice {
+  background: white;
+  color: #10264d;
+  border: 2px solid #10264d;
+  padding: 16px 12px;
+  border-radius: 9px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%;
+}
+
+#voter-video-faq .faq-video-choice:hover {
+  background: #d4e4f8;
+}
+
+#voter-video-faq .faq-video-choice.active {
+  background: #10264d;
+  color: white;
+}
+
+#voter-video-faq button:focus-visible,
+#voter-video-faq a:focus-visible {
+  outline: 3px solid #438bd3;
+  outline-offset: 3px;
+}
+
+#voter-video-faq .faq-video-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+#voter-video-faq .faq-video-container {
+  max-width: 370px;
+  margin: 20px auto;
+  aspect-ratio: 16 / 9;
+  background: #10264d;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+#voter-video-faq iframe {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#voter-video-faq .faq-video-resources {
+  background: white;
+  padding: 22px;
+  border-radius: 10px;
+  margin-top: 22px;
+}
+
+#voter-video-faq .faq-video-resources a {
+  display: inline-block;
+  background: #10264d;
+  color: white;
+  padding: 12px 16px;
+  margin: 7px 5px 7px 0;
+  border-radius: 8px;
+  text-decoration: none;
+}
+
+#voter-video-faq .faq-video-resources a:hover {
+  background: #244d80;
+}
+
+@media (max-width: 600px) {
+  #voter-video-faq {
+    padding: 18px;
+  }
+
+  #voter-video-faq .faq-video-buttons {
+    grid-template-columns: 1fr;
+  }
+
+  #voter-video-faq .faq-video-card {
+    padding: 15px;
+  }
+}
+
+</style>
+
+<script>
+(function() {
+
+const videos = {
+  "s2Z-EstOtiA": {
+    title: "How Do I Register to Vote?",
+    description:
+      "Watch this 30-second video explaining the basics of registering to vote."
+  },
+
+  "2PQmcrO_nXI": {
+    title: "How Do I Make a Voting Plan?",
+    description:
+      "Watch this 30-second video about preparing a plan for casting your ballot."
+  }
+};
+
+const buttons = document.querySelectorAll(
+  "#voter-video-faq .faq-video-choice"
+);
+
+const player = document.getElementById(
+  "faq-video-player"
+);
+
+const title = document.getElementById(
+  "faq-video-title"
+);
+
+const description = document.getElementById(
+  "faq-video-description"
+);
+
+const youtube = document.getElementById(
+  "faq-video-youtube"
+);
+
+function chooseVideo(id) {
+
+  if (!videos[id]) return;
+
+  title.textContent = videos[id].title;
+
+  description.textContent =
+    videos[id].description;
+
+  player.title = videos[id].title;
+
+  player.src =
+    "https://www.youtube-nocookie.com/embed/" + id;
+
+  youtube.href =
+    "https://www.youtube.com/watch?v=" + id;
+
+  buttons.forEach(function(button) {
+
+    const active = button.dataset.video === id;
+
+    button.classList.toggle("active", active);
+
+    button.setAttribute(
+      "aria-pressed",
+      String(active)
+    );
+
+  });
+
+}
+
+buttons.forEach(function(button) {
+
+  button.addEventListener("click", function() {
+
+    chooseVideo(button.dataset.video);
+
+  });
+
+});
+
+chooseVideo("s2Z-EstOtiA");
+
+})();
+</script>
+
+<!-- VIDEO FAQ SECTION END -->
 </main>
 <footer>
 <p>Voter Ready | Your Guide to Voting</p>
@@ -45,3 +338,4 @@ footer a { color: white; }
 </footer>
 </body>
 </html>
+
